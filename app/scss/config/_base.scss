@@ -21,7 +21,6 @@ body {
 .container {
 	max-width: $container + px;
 	width: 100%;
-	position: relative;
 	margin: 0 auto;
 	padding: 0 $containerPadding + px;
 
@@ -54,31 +53,17 @@ body {
 // Загальні налаштування тіла
 //
 body {
-	$line-height-main: 150;
-	$letter-spacing-main: 1;
-
 	font-family: $font-main;
 	background-color: $main-bg;
 	color: $main-clr;
 	@include adaptive-value('font-size', $fz-md, 18, 1);
 	font-weight: 400;
 	// line-height: calc($line-height-main / $fz-md / 1px);
-	line-height: calc($line-height-main / 100);
-	letter-spacing: #{calc($fz-xxxl * $letter-spacing-main / 100)}px;
 }
 
 // Title
 .h1 {
-	$line-height-h1: 125;
-	$letter-spacing-h1: 0;
-
-	font-family: $font-accent;
 	@include adaptive-value('font-size', $fz-xxxl, $fz-xxl, 1);
-	font-weight: 400;
-	color: $black-clr;
-	// line-height: calc($line-height-h1 / $fz-xxxl / 1px);
-	line-height: calc($line-height-h1 / 100);
-	letter-spacing: #{calc($fz-xxxl * $letter-spacing-h1 / 100)}px;
 }
 
 // .h2 {

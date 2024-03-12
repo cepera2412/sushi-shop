@@ -28,10 +28,7 @@
 .footer-link {
 	padding-right: 50px;
 	color: #fff;
-	font-family: 'Open Sans';
 	font-size: 18px;
-	font-weight: 500;
-	line-height: normal;
 	transition: color 0.5s ease;
 }
 
@@ -39,8 +36,6 @@
 .footer-link:focus {
 	color: #121111;
 	text-shadow: 2px 2px 4px #fff;
-	border: none;
-	outline: none;
 }
 
 .footer-link:active {
