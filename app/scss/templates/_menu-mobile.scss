@@ -1,0 +1,39 @@
+.menu-mobile {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	@include adaptive-value('width', 620, 250, 1);
+	// width: 50%;
+	height: 100%;
+	z-index: 5;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: linear-gradient(209deg, #e99e73 -17.38%, #ed7129 78.4%), #fa8d4e;
+	// background: rgb(130, 156, 168);
+	transition: all 0.2s ease-in;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 35px;
+		@include adaptive-value('font-size', 28, 20, 1);
+
+		& .active {
+			opacity: 0.5;
+		}
+	}
+	&__link {
+		color: $white-clr;
+		@include link-mob;
+	}
+
+	&--open {
+		left: 0;
+	}
+}

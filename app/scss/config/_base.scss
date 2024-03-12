@@ -1,0 +1,107 @@
+html {
+	// Плавний скрол веб-сторінки
+	scroll-behavior: smooth;
+}
+
+// Footer прив'язка до низу екрану
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+.main {
+	flex-grow: 1;
+}
+
+//  Контейнер
+.container {
+	max-width: $container + px;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 $containerPadding + px;
+
+	@include tablet {
+		padding: 0 15px;
+	}
+
+	@include mob {
+		padding: 0 10px;
+	}
+}
+
+// Секційні відступи
+// $minPad: 120;
+// $addPad: $s-pad - $minPad;
+
+// $s-pad: calc(
+// 	(#{$minPad}px) + $addPad *
+// 		((100vw - #{$minWidth}px) / #{$maxWidth - $minWidth})
+// );
+
+// $minPadAccent: 80;
+// $addPad: $s-pad-accent - $minPadAccent;
+
+// $s-pad-accent: calc(
+// 	(#{$minPadAccent}px) + $addPad *
+// 		((100vw - #{$minWidth}px) / #{$maxWidth - $minWidth})
+// );
+
+// Загальні налаштування тіла
+//
+body {
+	$line-height-main: 150;
+	$letter-spacing-main: 1;
+
+	font-family: $font-main;
+	background-color: $main-bg;
+	color: $main-clr;
+	@include adaptive-value('font-size', $fz-md, 18, 1);
+	font-weight: 400;
+	// line-height: calc($line-height-main / $fz-md / 1px);
+	line-height: calc($line-height-main / 100);
+	letter-spacing: #{calc($fz-xxxl * $letter-spacing-main / 100)}px;
+}
+
+// Title
+.h1 {
+	$line-height-h1: 125;
+	$letter-spacing-h1: 0;
+
+	font-family: $font-accent;
+	@include adaptive-value('font-size', $fz-xxxl, $fz-xxl, 1);
+	font-weight: 400;
+	color: $black-clr;
+	// line-height: calc($line-height-h1 / $fz-xxxl / 1px);
+	line-height: calc($line-height-h1 / 100);
+	letter-spacing: #{calc($fz-xxxl * $letter-spacing-h1 / 100)}px;
+}
+
+// .h2 {
+// 	$line-height-h2: 125;
+// 	$letter-spacing-h2: 2;
+
+// 	font-family: $font-accent;
+// 	@include adaptive-value('font-size', $fz-xxl, 28, 1);
+// 	font-weight: 400;
+// 	color: $black-clr;
+// 	// line-height: calc($line-height-h2 / $fz-xxl / 1px);
+// 	line-height: calc($line-height-h2 / 100);
+// 	letter-spacing: #{calc($fz-xxl * $letter-spacing-h2 / 100)}px;
+// }
+
+// .h3 {
+// 	$line-height-h3: 125;
+// 	$letter-spacing-h3: 0;
+
+// 	font-family: $font-accent;
+// 	@include adaptive-value('font-size', $fz-xl, 20, 1);
+// 	color: $black-clr;
+// 	// line-height: calc($line-height-h3 / $fz-xl / 1px);
+// 	line-height: calc($line-height-h3 / 100);
+// 	letter-spacing: #{calc($fz-xl * $letter-spacing-h3 / 100)}px;
+// }

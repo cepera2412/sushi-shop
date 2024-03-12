@@ -1,0 +1,95 @@
+/* ============================ Footer ===================== */
+.footer {
+	background-color: $accent-clr;
+	margin-top: 40px;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	padding: 20px 0;
+
+	@include mob {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+.footer-nav {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.footer-link {
+	padding-right: 50px;
+	color: #fff;
+	font-family: 'Open Sans';
+	font-size: 18px;
+	font-weight: 500;
+	line-height: normal;
+	transition: color 0.5s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+	color: #121111;
+	text-shadow: 2px 2px 4px #fff;
+	border: none;
+	outline: none;
+}
+
+.footer-link:active {
+	color: #f21111;
+	border: none;
+	outline: none;
+}
+
+.footer-address {
+	flex: 1 1 auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px #131313;
+
+	@include adaptive-value('font-size', 22, 16, 1);
+}
+
+.footer-tel {
+	display: block;
+	color: #fff;
+	transition: color 0.5s linear;
+}
+
+.footer-tel:hover,
+.footer-tel:focus {
+	color: #d67e34;
+}
+
+.footer-tel:active {
+	color: #141414;
+	text-shadow: 1px 1px 1px #ffffff;
+}
+
+.footer-email {
+	display: block;
+	color: #fff;
+	transition: color 0.5s linear;
+}
+
+.footer-email:hover,
+.footer-email:focus {
+	color: #d67e34;
+}
+
+.footer-email:active {
+	color: #141414;
+	text-shadow: 1px 1px 1px #ffffff;
+}

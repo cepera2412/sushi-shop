@@ -1,0 +1,25 @@
+.product {
+	padding: 50px 0;
+	&__inner {
+		@include grid2(2fr, 1fr, 40);
+
+		@include tablet {
+			@include grid2(1.5fr, 1.1fr, 30);
+		}
+
+		@include mob {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__cards {
+		@include grid-auto(280px, 1fr, 30);
+	}
+
+	&__cart {
+		@include mob {
+			display: none;
+		}
+	}
+}

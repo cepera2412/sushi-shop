@@ -1,0 +1,160 @@
+.cart {
+	padding: 20px;
+	box-shadow: 0 0 5px rgba(72, 72, 72, 0.7);
+
+	&__title {
+		font-weight: 700;
+	}
+
+	&__empty {
+		background-color: #c6c1c18d;
+		padding: 15px;
+		border-radius: 5px;
+		font-size: 14px;
+		margin: 15px 0 25px;
+	}
+
+	&__counter-wrapper {
+		background: #f2ede7;
+		border-radius: 6px;
+		width: 70px;
+		display: flex;
+		font-size: 14px;
+		height: 25px;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	&__control {
+		width: 40px;
+		cursor: pointer;
+		transition: 0.2s ease-in;
+		text-align: center;
+
+		&:hover {
+			background: #eb5a1e;
+			color: #fff;
+		}
+	}
+
+	&__current {
+		width: 30px;
+	}
+
+	&__price {
+		text-align: left;
+
+		&-weight {
+			color: #6c757d;
+			font-size: 80%;
+			line-height: 1;
+		}
+
+		&-currency {
+			font-size: 1.5rem;
+			font-weight: 600;
+			line-height: 1;
+		}
+	}
+
+	&__delivery {
+		font-weight: 900;
+	}
+
+	&__form {
+		border-top: 1px solid rgba(207, 207, 207, 0.7);
+		padding-top: 20px;
+
+		&-title {
+			font-size: 18px;
+			font-weight: 900;
+		}
+
+		&-control {
+			border: 1px solid rgba(207, 207, 207, 0.7);
+			padding: 10px;
+			margin: 15px 0;
+			font-size: 14px;
+			width: 100%;
+		}
+	}
+}
+
+.btn-primary {
+	font-size: 18px;
+	color: white;
+	background-color: #eb5a1e;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.cart-item__top {
+	display: flex;
+	align-items: flex-start;
+	// flex-wrap: wrap;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dee2e6;
+	margin-bottom: 15px;
+}
+
+.cart-item__img img {
+	max-width: 100px;
+	height: auto;
+}
+
+.cart-item__desc {
+	padding-top: 15px;
+	padding-left: 15px;
+}
+
+.cart-item__title {
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.cart-item__weight {
+	color: #6c757d !important;
+	font-size: 80%;
+	line-height: 1;
+	margin-bottom: 15px;
+}
+
+.cart-item__details {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cart-item__details .price__currency {
+	font-size: 18px;
+	margin-left: 15px;
+}
+
+.cart-total {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.delivery-span {
+	font-size: 12px;
+	color: gray;
+}
+
+.free {
+	color: #0ea107;
+}
+
+.total-price {
+	color: #eb5a1e;
+}
+
+.rouble {
+	color: #eb5a1e;
+}
+
+.none {
+	display: none;
+}

@@ -1,0 +1,9 @@
+// setting
+@import 'config/config';
+
+/* components and pages*/
+@import './components/*.scss';
+@import './pages/**/*.scss';
+
+/* components */
+@import './templates/*.scss';

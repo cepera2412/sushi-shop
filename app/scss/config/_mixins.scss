@@ -1,0 +1,93 @@
+// --------------------------------------------Grid
+
+@mixin grid-auto($min, $max, $gap: 0) {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax($min, $max));
+	gap: $gap + px;
+}
+
+@mixin grid2($column1, $column2, $gap: 0) {
+	display: grid;
+	grid-template-columns: $column1 $column2;
+	gap: $gap + px;
+}
+
+// ---------------------------------------------Flex
+
+@mixin f-c($gap: 0) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: $gap + px;
+}
+
+@mixin f-sb($gap: 0) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: $gap + px;
+}
+
+// ---------------------------------------- Link`s
+@mixin link() {
+	@extend %link;
+}
+
+@mixin link-mob() {
+	@extend %link-mob;
+}
+
+// ======================================= Адаптив значений
+@mixin adaptive-value(
+	$property,
+	$startSize,
+	$minSize,
+	$type,
+	$minWidth: $minWidth
+) {
+	$addSize: $startSize - $minSize;
+	@if $type==1 {
+		//  Только для меньше контейнера
+		#{$property}: #{$startSize}px;
+		@media (max-width: #{$containerWidth}px) {
+			#{$property}: calc(
+				#{$minSize}px + #{$addSize} * ((100vw - #{$minWidth}px) / #{$containerWidth -
+							$minWidth})
+			);
+		}
+	} @else if $type==2 {
+		//  Только для больше контейнера
+		#{$property}: #{$startSize}px;
+		@media (min-width: #{$containerWidth}px) {
+			#{$property}: calc(
+				#{$minSize}px + #{$addSize} * ((100vw - #{$minWidth}px) / #{$maxWidth -
+							$minWidth})
+			);
+		}
+	} @else {
+		#{$property}: calc(
+			#{$minSize}px +
+				#{$addSize} *
+				((100vw - #{$minWidth}px) / #{$maxWidth - $minWidth})
+		);
+	}
+}
+
+// =====================================  media
+@mixin mini-pk {
+	@media (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: 999px) {
+		@content;
+	}
+}
+
+@mixin mob {
+	@media (max-width: 767px) {
+		@content;
+	}
+}

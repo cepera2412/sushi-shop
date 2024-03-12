@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- Змінити мову сайту -->
+<html lang="en">
+	<head>
+		<!-- Не забудь змінити назву Title  -->
+		@@include('components/templates/head.html')
+	</head>
+	<body>
+		<div class="wrapper">
+			@@include('components/header.html')
+
+			<!-- Main -->
+			<main class="main">
+				@@include('components/main-hero.html')
+				@@include('components/main-product.html')
+			</main>
+			<!-- end Main -->
+
+			@@include('components/footer.html')
+		</div>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

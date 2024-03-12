@@ -1,0 +1,55 @@
+//  Контейнер
+$containerWidth: 1200;
+$containerPadding: 20;
+$container: calc($containerWidth + $containerPadding * 2);
+
+$minWidth: 320;
+$maxWidth: 1920;
+
+// padding section
+
+// $s-pad: 200;
+// $s-pad-accent: 150;
+
+// Fonts
+$font-main: 'Merriweather', serif;
+$font-accent: 'DM Serif Display', serif;
+// $font-rare: 'roboto', sans-serif;
+
+// Font-size без px
+$fz-xxxl: 85;
+$fz-xxl: 50;
+$fz-xl: 25;
+$fz-md: 22;
+$fz-sm: 18;
+$fz-xs: 14;
+
+// color text
+$white-clr: #fff;
+$black-clr: #292f36;
+$main-clr: #4d5053;
+$accent-clr: #ed7129;
+$hover-clr: rgba(41, 47, 54, 0.7);
+$active-clr: $accent-clr;
+// $gray-clr: #a8b7e7;
+// $logo-clr: #a7b7e7;
+
+// color background
+$white-bg: #fff;
+$black-bg: #292f36;
+$main-bg: #fff;
+$accent-bg: #ed7129;
+// $gray-clr: #a8b7e7;
+
+// color button
+$main-btn: #292f36;
+$accent-btn: #cda274;
+$hover-btn: #686d74;
+$active-btn: $accent-btn;
+
+//
+// Темна тема
+// .dark {
+// 	$page-bg: #252526;
+// 	$text-color: #fff;
+// }

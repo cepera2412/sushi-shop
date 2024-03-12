@@ -1,0 +1,92 @@
+// Переменные
+$menuMobile-time: 0.1s;
+
+$menuMobile-width: 40px;
+$menuMobile-height: 30px;
+
+$menuMobile-line-height: 4px;
+$menuMobile-spacing: 6px;
+
+$menuMobile-color: $black-clr;
+$menuMobile-radius: 4px;
+
+/* Nav Icon */
+.header {
+	&__menu-mobile {
+		//
+
+		&-btn {
+			/* Fixed height and width */
+			// height: var(--height);
+			// width: var(--width);
+
+			/* Dynamic height and width */
+			height: calc($menuMobile-line-height * 3 + $menuMobile-spacing * 2);
+			width: $menuMobile-width;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			z-index: 10;
+			display: none;
+			@include mob {
+				display: block;
+			}
+		}
+		&-icon {
+			position: relative;
+			width: $menuMobile-width;
+			height: $menuMobile-line-height;
+			background-color: $menuMobile-color;
+			border-radius: $menuMobile-radius;
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+
+				position: absolute;
+				left: 0;
+
+				width: $menuMobile-width;
+				height: $menuMobile-line-height;
+
+				border-radius: $menuMobile-radius;
+				background-color: $menuMobile-color;
+				transition: transform $menuMobile-time ease-in,
+					top $menuMobile-time linear $menuMobile-time;
+			}
+
+			&::before {
+				/* top: calc(var(--line-height) * -2); */
+				top: calc(-1 * ($menuMobile-line-height + $menuMobile-spacing));
+			}
+
+			&::after {
+				/* top: calc(var(--line-height) * 2); */
+				top: calc($menuMobile-line-height + $menuMobile-spacing);
+			}
+
+			&--active {
+				background-color: transparent;
+			}
+
+			&--active::before,
+			&--active::after {
+				top: 0;
+				background-color: #fff;
+				transition: top $menuMobile-time linear,
+					transform $menuMobile-time ease-in $menuMobile-time;
+			}
+
+			&--active::before {
+				transform: rotate(45deg);
+			}
+
+			&--active::after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}

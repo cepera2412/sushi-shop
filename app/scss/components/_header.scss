@@ -1,0 +1,68 @@
+.header {
+	padding: 30px 0;
+
+	&__row {
+		@include f-sb(20);
+	}
+
+	&__logo {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+		align-items: center;
+
+		&-text {
+			color: #ed7129;
+		}
+	}
+
+	&__list {
+		flex: 1 1 auto;
+		@include f-c;
+		@include adaptive-value('gap', 45, 20, 1, 767);
+		@include adaptive-value('font-size', 22, 16, 1, 767);
+		@include mob {
+			display: none;
+		}
+	}
+
+	&__link {
+		@include link;
+		padding: 20px 0;
+	}
+
+	&__cart {
+		position: relative;
+		transition: color 0.3s ease-in;
+
+		&:hover,
+		&:focus {
+			color: $accent-clr;
+		}
+
+		&-number {
+			position: absolute;
+			top: 0;
+			right: -7px;
+
+			font-size: 12px;
+			color: $white-clr;
+			background-color: $accent-bg;
+			border-radius: 50%;
+			width: 22px;
+			height: 22px;
+			text-align: center;
+			line-height: 22px;
+		}
+
+		&-block {
+			position: absolute;
+			top: 45px;
+			right: 0;
+			z-index: 10;
+
+			width: clamp(17.5rem, 13.026rem + 22.371vw, 23.75rem);
+			background-color: rgba(255, 255, 255, 0.85);
+		}
+	}
+}
